@@ -8,6 +8,11 @@ import { setupDevPlatform } from '@cloudflare/next-on-pages/next-dev';
 setupDevPlatform().catch(console.error);
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  // Configure environment variables to be available in the browser
+  env: {
+    MONGODB_URI: process.env.MONGODB_URI,
+  }
+};
 
 export default nextConfig;
