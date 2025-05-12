@@ -9,9 +9,15 @@
 		"lint": "next lint",
 		"pages:build": "npx @cloudflare/next-on-pages",
 		"preview": "npm run pages:build && wrangler pages dev",
-		"deploy": "npm run pages:build && wrangler pages deploy"
+		"deploy": "npm run pages:build && wrangler pages deploy",
+		"db:generate": "drizzle-kit generate",
+		"db:migrate": "wrangler d1 migrations apply next-test-db --remote",
+		"db:migrate:local": "node scripts/migrate-local.js",
+		"db:studio": "drizzle-kit studio"
 	},
 	"dependencies": {
+		"@libsql/client": "^0.15.5",
+		"drizzle-orm": "^0.43.1",
 		"next": "15.3.1",
 		"react": "^19.0.0",
 		"react-dom": "^19.0.0"
@@ -21,6 +27,8 @@
 		"@cloudflare/workers-types": "^4.20250510.0",
 		"@eslint/eslintrc": "^3",
 		"@tailwindcss/postcss": "^4",
+		"better-sqlite3": "^9.4.1",
+		"drizzle-kit": "^0.21.1",
 		"eslint": "^9",
 		"eslint-config-next": "15.3.1",
 		"tailwindcss": "^4",
