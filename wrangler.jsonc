@@ -30,9 +30,7 @@
 	 * Environment Variables
 	 * https://developers.cloudflare.com/workers/wrangler/configuration/#environment-variables
 	 */
-	"vars": {
-		"MONGODB_URI": "mongodb+srv://shaswatraj3:0RHl2OCdnR4w2zuU@cluster0.1wx1qox.mongodb.net/"
-	},
+	// "vars": { "MY_VARIABLE": "production_value" },
 	/**
 	 * Note: Use secrets to store sensitive data.
 	 * https://developers.cloudflare.com/workers/configuration/secrets/

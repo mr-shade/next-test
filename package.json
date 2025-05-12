@@ -4,19 +4,15 @@
 	"private": true,
 	"scripts": {
 		"dev": "next dev --turbopack",
-		"build": "prisma generate && next build",
+		"build": "next build",
 		"start": "next start",
 		"lint": "next lint",
-		"pages:build": "prisma generate && npx @cloudflare/next-on-pages",
+		"pages:build": "npx @cloudflare/next-on-pages",
 		"preview": "npm run pages:build && wrangler pages dev",
-		"deploy": "npm run pages:build && wrangler pages deploy",
-		"prisma:generate": "prisma generate",
-		"prisma:accelerate": "npx prisma generate --accelerate"
+		"deploy": "npm run pages:build && wrangler pages deploy"
 	},
 	"dependencies": {
-		"@prisma/client": "^6.7.0",
 		"next": "15.3.1",
-		"prisma": "^6.7.0",
 		"react": "^19.0.0",
 		"react-dom": "^19.0.0"
 	},
@@ -28,7 +24,7 @@
 		"eslint": "^9",
 		"eslint-config-next": "15.3.1",
 		"tailwindcss": "^4",
-		"vercel": "^41.7.3",
+		"vercel": "^41.7.4",
 		"wrangler": "^4.14.4"
 	}
 }
